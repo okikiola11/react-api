@@ -29,7 +29,13 @@ class App extends Component {
     }
     return (
       <div className="App">
-        Data has been loaded
+        <ul>
+          {items.map(item => (
+            <li key={item.id}>
+              Name: {item.name} | Email: {item.email}
+            </li>
+          ))}
+        </ul>
       </div>
     );
   }
